@@ -55,6 +55,14 @@
       return $auction_bits;
     }
 
+    //insert values into the database
+    //Need add functions to check for duplicate entries 
+    function auction_insert($suburb, $price, $address, $pdo){
+        $sql = "INSERT INTO domain_auctions (suburb, price, address) VALUES (?,?,?)";
+        $stmt= $pdo->prepare($sql);
+        $stmt->execute([$suburb, $price, $address]);
+    }
+
 
 
 

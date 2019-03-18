@@ -28,7 +28,7 @@
 
 
   //load database
-  $db = new Db\Db($db_config['db_host'], $db_config['db_username'], $db_config['db_pass'], $db_config['db_database'], $db_config['charset'], $db_config['pdo_options']);
+  //$pdo = new Db\Db($db_config['db_host'], $db_config['db_username'], $db_config['db_pass'], $db_config['db_database'], $db_config['charset'], $db_config['pdo_options']);
 
 
 
