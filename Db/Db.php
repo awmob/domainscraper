@@ -11,7 +11,7 @@
     private $charset;
     private $dsn;
     private $pdo_options;
-    public $pdo;
+    private $pdo;
 
     //construct and connect to PDO
     function __construct($host, $username, $pass, $db, $charset, $pdo_options){
@@ -24,17 +24,17 @@
 
       //set dsn settings
       $this->set_dsn();
-
     }
 
+    //sets the dsn settings
     private function set_dsn(){
       $dsn = "mysql:host=$this->host;dbname=$this->db;charset=$this->charset";
       $this->dsn = $dsn;
     }
 
-    public function db_connect(){
+    //creates a database connection
+    private function db_connect(){
       try{
-
         $pdo = new \PDO($this->dsn, $this->username, $this->pass, $this->pdo_options);
         $this->pdo = $pdo;
       }

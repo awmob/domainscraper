@@ -18,8 +18,12 @@
   //load config
   misc_loader("config/db_config");
 
-  //load and declare classes
+  //load and declare the scrapers
   $scraper = new Scrapers\DomainScraper();
+
+  //load database
   $db = new Db\Db($db_config['db_host'], $db_config['db_username'], $db_config['db_pass'], $db_config['db_database'], $db_config['charset'], $db_config['pdo_options']);
 
-  $db->db_connect();
+
+
+  ini_set('user_agent', 'MyBrowser v42.0.4711');

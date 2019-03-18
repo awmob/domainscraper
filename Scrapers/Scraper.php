@@ -2,7 +2,7 @@
 
   namespace Scrapers;
 
-  Class Scraper{
+  Abstract Class Scraper{
 
 
 
