@@ -24,12 +24,17 @@
 
       //set dsn settings
       $this->set_dsn();
+      $this->db_connect();
     }
 
     //sets the dsn settings
     private function set_dsn(){
       $dsn = "mysql:host=$this->host;dbname=$this->db;charset=$this->charset";
       $this->dsn = $dsn;
+    }
+
+    function get_pdo(){
+      return $this->pdo;
     }
 
     //creates a database connection

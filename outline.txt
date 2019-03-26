@@ -1,0 +1,34 @@
+database structure
+
+properties
+------------
+id
+suburb_id
+
+
+suburbs
+------------
+id
+suburb_name
+postcode
+state_id
+long
+lat
+locality
+
+states
+---------------
+id
+state_name
+state_code
+
+users
+--------------
+id
+username
+password
+
+
+$2y$10$EhNkggaqA9HHQdlHuosdTuGzixNnPP5Nn965Cy8NnpG/4vxz8Og82
+
+ALTER TABLE suburbs ALTER COLUMN state_id varchar(6);

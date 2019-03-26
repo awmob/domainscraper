@@ -16,14 +16,14 @@ $scraper_config = array(
 global $sites_config;
 
 $sites_config = array(
-
   'domain' => [
 
-    'index' => 1,
+    'page_var' => '&page=',
     'property_uri' => 'https://www.domain.com.au',
-    'sydney_auction_results_uri' => 'https://www.domain.com.au/auction-results/sydney/'
+    'sydney_auction_results_uri' => 'https://www.domain.com.au/auction-results/sydney/',
+    'sydney_sold_listings' => 'https://www.domain.com.au/sold-listings/sydney-region-nsw/house/?ssubs=1'
 
-  ],
+  ]
 
 
 );
